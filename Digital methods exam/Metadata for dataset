@@ -1,10 +1,10 @@
 Metadata for dataset "Parish book Sonderborg:
 
 
-Identifier:	Each entry gets a unique to avoid duplicate entries. A numeric value, starting from 1, is used. 
-Day_of_birth:	The on on witch the person was born. If not known, NA is used 
-Day_of_death:	The day on which the person died.
-day_of_funeral: The day on which the person was buried.
+Identifier:	Each entry gets a unique number to avoid duplicate entries. A numeric value, starting from 1, is used. 
+Day_of_birth:	The on on witch the person was born. If not known, NA is used. The data format in Windows exel does not go below the date 01.01.1900. These inputs are therefore formatted as numeric instead of date format.
+Day_of_death:	The day on which the person died. Date format
+day_of_funeral: The day on which the person was buried. Date format
 Male:	If the sex of the person is male, then a Y (meaning yes) is inputted. If not, then a N (meaning no) is used.
 Female:	If the sex of the person is female then a Y (meaning yes) is inputted. If not, then a N (meaning no) is used.
 Age:	The age of the person when they died in numeric values. If not known, NA is used. If the person is under the age of 0, the age i calculated into a decimal number 
