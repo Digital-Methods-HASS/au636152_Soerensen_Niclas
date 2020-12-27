@@ -1,5 +1,6 @@
 Metadata for dataset "Parish book Sonderborg:
-
+The data has been used under the priciples provided from "Rigsarkivet", stating that records containing personal information can be accesed after a time-period of 75 years. 
+Even with this in mind, all personal information from the Sønderborg parish record have NOT been used, and only raw data such as day of day has been used. 
 
 Identifier:	Each entry gets a unique number to avoid duplicate entries. A numeric value, starting from 1, is used. 
 Day_of_birth:	The on on witch the person was born. If not known, NA is used. The data format in Windows exel does not go below the date 01.01.1900. These inputs are therefore formatted as numeric instead of date format.
