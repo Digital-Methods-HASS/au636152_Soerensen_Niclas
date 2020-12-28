@@ -9,7 +9,7 @@ men <- subset(Parish_book_Sonderborg, Male=="Y")
 menPre <- subset(men, Day_of_death<'1914-07-28 00:00:00', c(Age))
 menDuring <- subset(men, Day_of_death>'1914-07-28 00:00:00', c(Age))
 
-#Calculate average ages 
+#Calculate average ages of males
 avgMenPre <- colMeans(menPre, na.rm = TRUE)
 avgMenDuring <- colMeans(menDuring, na.rm = TRUE)
 
@@ -26,7 +26,7 @@ nrOfMenDuring <- nrow(menDuring)
 totalDeathDuring <- nrow(subset(Parish_book_Sonderborg,Day_of_death>'1914-07-28 00:00:00'))
 percentMenDuring <- (nrOfMenDuring/totalDeathDuring)*100
 
-#Calculating child mortality rate pre and during 28. juli 1914
+#Calculating child mortality rate pre and post 28. juli 1914
 nrOfDeadChildrenPre <- nrow(subset(menPre, Age<15))
 nrOfDeadChildrenDuring <- nrow(subset(menDuring, Age<15))
 
