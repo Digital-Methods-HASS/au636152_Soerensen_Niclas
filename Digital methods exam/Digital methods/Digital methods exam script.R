@@ -1,6 +1,13 @@
 #Imports 
 library(tidyverse)
 library(gganimate)
+library(readxl)
+
+#Please make sure that the col_types matcheS these, otherwise the code will not work properly since it is format dependent.
+#The "read_exel" should match the directory where the data set is stored on your computer. This is most likely your download folder. This is where it is stored on my computer.
+Parish_book_Sonderborg <- read_excel("D:/Digital methods exam/Parish book Sonderborg.xlsx", 
+                                     col_types = c("numeric", "text", "date", "date", "text", "text", "numeric"))
+View(Parish_book_Sonderborg)
 
 #Creating an object of all the males in the dataset
 men <- subset(Parish_book_Sonderborg, Male=="Y")
@@ -37,7 +44,7 @@ nrOfDeadChildrenDuring <- nrow(subset(menDuring, Age<15))
 plotDataAvg <- data.frame(
   average_age_of_males_pre_and_during_ww1=c("Average age of males pre ww1","Average age of males during ww1"),
   age_in_numbers=c(38.4,43.1)
-  )
+)
 chartAvgAge<-ggplot(data=plotDataAvg, aes(x=average_age_of_males_pre_and_during_ww1, y=age_in_numbers)) +
   geom_bar(stat="identity")+
   labs(title="Average age of males")
@@ -50,7 +57,7 @@ plotDataNrDead <- data.frame(
 )
 chartNrDead <- ggplot(data=plotDataNrDead, aes(x=number_of_dead_males_pre_and_during_ww1, y=total_number_of_death))+
   geom_bar(stat = "identity")+
-labs(title = "Number of male death")
+  labs(title = "Number of male death")
 chartNrDead
 
 #plotting the percentage of male death chart
@@ -62,4 +69,3 @@ chartPercentDead <- ggplot(data=plotDataPercentDead, aes(x=percentage_of_male_de
   geom_bar(stat = "identity")+
   labs(title ="Percentage of male death")
 chartPercentDead
-
