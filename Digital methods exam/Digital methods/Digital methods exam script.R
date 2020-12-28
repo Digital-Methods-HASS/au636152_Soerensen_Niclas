@@ -3,7 +3,7 @@ library(tidyverse)
 library(gganimate)
 library(readxl)
 
-#Please make sure that the col_types matcheS these, otherwise the code will not work properly since it is format dependent.
+#Please make sure that the col_types matches these, otherwise the code will not work properly since it is format dependent.
 #The "read_exel" should match the directory where the data set is stored on your computer. This is most likely your download folder. This is where it is stored on my computer.
 Parish_book_Sonderborg <- read_excel("D:/Digital methods exam/Parish book Sonderborg.xlsx", 
                                      col_types = c("numeric", "text", "date", "date", "text", "text", "numeric"))
