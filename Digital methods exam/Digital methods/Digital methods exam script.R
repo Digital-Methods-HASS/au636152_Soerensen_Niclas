@@ -3,10 +3,8 @@ library(tidyverse)
 library(gganimate)
 library(readxl)
 
-#Please make sure that the col_types matches these, but the code below should format it automatically. Otherwise this project will not work properly since it is format dependent. 
-#The "read_exel" should match the directory where the data set is stored on your computer. This is most likely your download folder. This is where it is stored on my computer.
-Parish_book_Sonderborg <- read_excel("D:/Digital methods exam/Parish book Sonderborg.xlsx", 
-                                     col_types = c("numeric", "text", "date", "date", "text", "text", "numeric"))
+#Loading the dataset from my GitHub repository
+Parish_book_Sonderborg <- read.csv(url("https://raw.githubusercontent.com/Digital-Methods-HASS/au636152_Soerensen_Niclas/main/Digital%20methods%20exam/Parish.book.Sonderborg.csv.csv"))
 View(Parish_book_Sonderborg)
 
 #Creating an object of all the males in the dataset
