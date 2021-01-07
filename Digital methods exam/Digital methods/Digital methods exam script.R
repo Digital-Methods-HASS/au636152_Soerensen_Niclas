@@ -1,7 +1,7 @@
-#Imports 
+#Imports and installation
+install.packages("tidyverse")
 library(tidyverse)
-library(gganimate)
-library(readxl)
+
 
 #Loading the dataset from my GitHub repository
 Parish_book_Sonderborg <- read.csv(url("https://raw.githubusercontent.com/Digital-Methods-HASS/au636152_Soerensen_Niclas/main/Digital%20methods%20exam/Parish.book.Sonderborg.csv.csv"))
